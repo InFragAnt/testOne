@@ -21,7 +21,7 @@ function sequence2(start = 11, increment = 2){
 
 console.log(myCounter2()); 
 console.log(myCounter2()); */
-var myCounter = sequence();
+/*var myCounter = sequence();
 function sequence(start = 1, increment = 5){
     return function(){
         var sumToReturn = start;
@@ -40,7 +40,7 @@ function mkArr(fn, iter) {
 }
 
 console.log(myCounter(fn(), 3));
-
+*/
 
 /*
 var nabe = "Name";
@@ -60,3 +60,8 @@ console.log(name);
 doIt();
 
 */
+var str = "salamaleikum!!";
+ 
+str = str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+ 
+console.log(str);
