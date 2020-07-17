@@ -1,0 +1,13 @@
+<div class="www">Meow</div>
+<br>
+<span class="www">Mio</span>
+<br>
+<p class="www">Mrrrr</p>
+<br>
+
+<script>
+    var arr = document.getElementsByClassName('www');
+    for (var i=0; i<arr.length; i++){
+        arr[i].innerHTML=arr[i].textContent + " " +arr[i].tagName.toLowerCase();
+    }
+</script>
