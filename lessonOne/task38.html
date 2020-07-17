@@ -1,0 +1,13 @@
+<div id="elem">
+    <p>Meow</p>
+    <p>Miy</p>
+    <p>Mrrrr</p>
+    <p>Prrrr</p>
+</div>
+
+<script>
+    var elem = document.getElementById('elem');
+    for (var i=0; i<elem.children.length; i++){
+        elem.children[i].innerHTML+='!';
+    }
+</script>
