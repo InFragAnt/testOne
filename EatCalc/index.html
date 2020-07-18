@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Tips Calculator</title>
+  </head>
+  <body>
+
+
+                <!-- В целом ещё ничего не готово... (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧    (*-_-)       ｡ﾟ･ (>﹏<) ･ﾟ｡       {{ (>_<) }}       -->
+
+    <div id="container">
+      <!-- CALCULATOR start -->
+      <div id="calculator">
+        <form>
+          <h2>Размер коробки</h2>
+          <div class="input-group mb-3">
+
+            <div class="form_radio" style="width: 380px;">
+              <input id="radio-1" type="radio" name="radio" value="1" checked>
+              <label for="radio-1">Маленькая коробочка</label>
+            </div>
+             
+            <div class="form_radio" style="width: 380px;">
+              <input id="radio-2" type="radio" name="radio" value="2">
+              <label for="radio-2">Большая коробочка</label>
+            </div>
+             
+            <div class="form_radio" style="width: 380px;">
+              <input id="radio-3" type="radio" name="radio" value="3">
+              <label for="radio-3">Мега коробочка</label>
+            </div>
+
+          </div>
+
+          <h2>Сочетание соуса с топпингом</h2>
+          <div class="input-group mb-3">
+            <div class="form_radio" style="width: 380px;">
+              <input id="radio-4" type="radio" name="radio2" value="1" checked>
+              <label for="radio-4">Терияки и свинина</label>
+            </div>
+             
+            <div class="form_radio" style="width: 380px;">
+              <input id="radio-5" type="radio" name="radio2" value="2">
+              <label for="radio-5">Унаги и говядина</label>
+            </div>
+             
+            <div class="form_radio" style="width: 380px;">
+              <input id="radio-6" type="radio" name="radio2" value="3">
+              <label for="radio-6">Устричный и курица</label>
+            </div>
+            
+            <div class="form_radio" style="width: 380px;">
+              <input id="radio-7" type="radio" name="radio2" value="4">
+              <label for="radio-7">Брусничный и мраморная говядина</label>
+            </div>
+
+            <div class="form_radio" style="width: 380px;">
+              <input id="radio-8" type="radio" name="radio2" value="5">
+              <label for="radio-8">Фруктовый и кролик</label>
+            </div>
+
+          <h2>Доп. опции</h2>
+          <div class="input-group mb-3">
+            <div style="width: 380px;">
+              <input type="checkbox" id=”one”> Посыпать сухариками
+            </div>
+            <div style="width: 380px;">
+              <input type="checkbox" id=”one”> Полить доп. соусом
+            </div>
+            <div style="width: 380px;">
+              <input type="checkbox" id=”one”> Добавить кунжута
+            </div>
+            
+            	
+          </div>
+
+          <button type="button" id="calculate">Calculate!</button>
+
+        </form>
+      </div>
+      <!-- CALCULATOR end -->
+      <!-- TIPS start -->
+      <div id="totalTip">
+        <span id="pay1">0</span>
+        <small>р.</small><br>
+        <span id="pay2">0</span>
+        <small >Калорий</small>
+      </div>
+      <!-- TIPS end -->
+    </div>
+
+
+
+    <script src="calculator.js"></script>
+  </body>
+</html>
