@@ -10,69 +10,23 @@ var lists = document.querySelectorAll("li");
 var tipsBtn = document.querySelector(".tipBtn");
 var closeBtn = document.querySelector(".closebtn");
 var overlay = document.getElementById("overlay");
+var weather = document.getElementById("weather");
 
-// Delete todo if delete span clicked
+// Delete todo if delete span clicked   оставить тут
 function deleteTodo(){
-    console.log(spans);
     for(let span of spans){
         span.addEventListener('click', function(){
             span.parentElement.remove();
         })
     }
 }
-
+// оставить тут
 function loadTodos(){
-    console.log(localStorage.getItem("todoList"));
     if(localStorage.getItem("todoList")){
         ul.innerHTML = localStorage.getItem("todoList");
-    }
-}
-
-pencil.addEventListener('click', function(){
-    input.classList.toggle('display');
-})
-
-tipsBtn.addEventListener("click", function(){
-    overlay.style.height = '100%';
-});
-
-closeBtn.addEventListener("click", function(event) {
-    event.preventDefault();
-    overlay.style.height = "0";
-});
-
-ul.addEventListener("click", function(e){
-    if (e.target.tagName === 'LI'){
-        e.target.classList.toggle('checked');
-    }
-});
-
-input.addEventListener('keypress', function(key){
-    if(key.which === 13){
-        var li = document.createElement('li');
-        var spanElement = document.createElement('span');
-        var icon =document.createElement('i');
-
-        var newTodo = this.value;
-        this.value="";
-
-        icon.classList.add('fas', 'fa-trash-alt');
-        spanElement.append(icon);
-        ul.appendChild(li).append(spanElement, newTodo);
-
         deleteTodo();
     }
-})
-
-// Clear all todos on click Clear button
-clearBtn.addEventListener('click', function(){
-    ul.innerHTML="";
-})
-
-saveBtn.addEventListener('click', function(){
-    localStorage.setItem('todoList', ul.innerHTML);
-    console.log(localStorage);
-})
+}
 
 deleteTodo();
 
