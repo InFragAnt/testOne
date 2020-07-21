@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+
+  <div id="app">
+        <v-img :src="image.url" contain> </v-img>    
+  </div>
+
+  <script>
+    new Vue({ 
+        el: '#app',
+        vuetify: new Vuetify(),
+        data: {
+            image: { url: ""}
+        },
+        created(){
+            this.loadNextImage();
+        } ,
+        methods:{
+            async loadNextImage()
+            {
+                try{
+                    axios.defaults.headers.common['x-api-key'] = "d412f19d-6962-4793-83bf-ddfed4d79cbc"
+
+                    let response = await axios.get('https://api.thecatapi.com/v1/images/search', { params: { limit:1, size:"full" } } )
+                    
+                    this.image = response.data[0]
+
+                    console.log("url:", this.image.url)
+
+                }catch(err){
+                    console.log(err)
+                }
+            }
+        }
+    })
+  </script>
+  <!-- Попалась классная документация!!! (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ -->
+</body>
+</html>
