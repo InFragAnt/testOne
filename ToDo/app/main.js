@@ -1,17 +1,36 @@
 var input = document.querySelector("input[type='text']");
+var ul = document.querySelector("ul");
+var container = document.querySelector("div");
 var lists = document.querySelectorAll("li");
-
-
-
+var spans = document.getElementsByTagName("span");
+var pencil = document.querySelector("#pencil");
+var saveBtn = document.querySelector(".save");
+var clearBtn = document.querySelector(".clear");
+var lists = document.querySelectorAll("li");
 var tipsBtn = document.querySelector(".tipBtn");
-
 var closeBtn = document.querySelector(".closebtn");
-var liUn = document.querySelector(".uncheked");
-/*var liCh = document.querySelector(".cheked"); */
-
-
 var overlay = document.getElementById("overlay");
-var trash = document.getElementById("trash");
+
+// Delete todo if delete span clicked
+function deleteTodo(){
+    console.log(spans);
+    for(let span of spans){
+        span.addEventListener('click', function(){
+            span.parentElement.remove();
+        })
+    }
+}
+
+function loadTodos(){
+    console.log(localStorage.getItem("todoList"));
+    if(localStorage.getItem("todoList")){
+        ul.innerHTML = localStorage.getItem("todoList");
+    }
+}
+
+pencil.addEventListener('click', function(){
+    input.classList.toggle('display');
+})
 
 tipsBtn.addEventListener("click", function(){
     overlay.style.height = '100%';
@@ -22,12 +41,39 @@ closeBtn.addEventListener("click", function(event) {
     overlay.style.height = "0";
 });
 
-trash.addEventListener("click", function(){
-    liUn.classList.remove("unchecked");
-    liUn.classList.add("checked");
+ul.addEventListener("click", function(e){
+    if (e.target.tagName === 'LI'){
+        e.target.classList.toggle('checked');
+    }
 });
 
-/*trash.addEventListener("click", function(){
-    liCh.classList.remove("checked");
-    liCh.classList.add("unchecked");
-});*/
+input.addEventListener('keypress', function(key){
+    if(key.which === 13){
+        var li = document.createElement('li');
+        var spanElement = document.createElement('span');
+        var icon =document.createElement('i');
+
+        var newTodo = this.value;
+        this.value="";
+
+        icon.classList.add('fas', 'fa-trash-alt');
+        spanElement.append(icon);
+        ul.appendChild(li).append(spanElement, newTodo);
+
+        deleteTodo();
+    }
+})
+
+// Clear all todos on click Clear button
+clearBtn.addEventListener('click', function(){
+    ul.innerHTML="";
+})
+
+saveBtn.addEventListener('click', function(){
+    localStorage.setItem('todoList', ul.innerHTML);
+    console.log(localStorage);
+})
+
+deleteTodo();
+
+loadTodos();
