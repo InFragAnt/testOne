@@ -15,10 +15,13 @@ html {
     justify-content: center;
   }
   
+  #form{
+    margin-left: 5px;
+  }
   
   #container {
     height: 700px;
-    width: 380px;
+    width: 400px;
     margin: 100px auto;
     background: #f7f7f7;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
@@ -76,27 +79,10 @@ html {
     top: 1px;
   }
   
-  #totalTip {
+  #expense {
     font-size: 30px;
-    margin-top: 5px;
+    margin-top: -35px;
     text-align: center;
   }
   
-  #totalTip:before {
-    content: "Tip amount";
-    font-size: 20px;
-    font-weight: bold;
-    display: block;
-    text-transform: uppercase;
-  }
   
-  #totalTip sup {
-    font-size: 20px;
-    top: -18px;
-  }
-  
-  #totalTip small {
-    font-size: 20px;
-    font-weight: bold;
-    display: block;
-  }

@@ -10,28 +10,28 @@
   <body>
 
 
-                <!-- В целом ещё ничего не готово... (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧    (*-_-)       ｡ﾟ･ (>﹏<) ･ﾟ｡       {{ (>_<) }}       -->
+                <!-- Уже всё готово (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ -->
 
     <div id="container">
       <!-- CALCULATOR start -->
       <div id="calculator">
-        <form>
+        <form id="form">
           <h2>Размер коробки</h2>
           <div class="input-group mb-3">
 
             <div class="form_radio" style="width: 380px;">
-              <input id="radio-1" type="radio" name="radio" value="1" checked>
-              <label for="radio-1">Маленькая коробочка</label>
+              <input id="smallBox" type="radio" name="radio" value="smallBox" checked>
+              <label for="smallBox">Маленькая коробочка</label>
             </div>
              
             <div class="form_radio" style="width: 380px;">
-              <input id="radio-2" type="radio" name="radio" value="2">
-              <label for="radio-2">Большая коробочка</label>
+              <input id="largeBox" type="radio" name="radio" value="largeBox">
+              <label for="largeBox">Большая коробочка</label>
             </div>
              
             <div class="form_radio" style="width: 380px;">
-              <input id="radio-3" type="radio" name="radio" value="3">
-              <label for="radio-3">Мега коробочка</label>
+              <input id="megaBox" type="radio" name="radio" value="megaBox">
+              <label for="megaBox">Мега коробочка</label>
             </div>
 
           </div>
@@ -39,52 +39,52 @@
           <h2>Сочетание соуса с топпингом</h2>
           <div class="input-group mb-3">
             <div class="form_radio" style="width: 380px;">
-              <input id="radio-4" type="radio" name="radio2" value="1" checked>
-              <label for="radio-4">Терияки и свинина</label>
+              <input id="pig" type="radio" name="radio2" value="pig" checked>
+              <label for="pig">Терияки и свинина</label>
             </div>
              
             <div class="form_radio" style="width: 380px;">
-              <input id="radio-5" type="radio" name="radio2" value="2">
-              <label for="radio-5">Унаги и говядина</label>
+              <input id="beef" type="radio" name="radio2" value="beef">
+              <label for="beef">Унаги и говядина</label>
             </div>
              
             <div class="form_radio" style="width: 380px;">
-              <input id="radio-6" type="radio" name="radio2" value="3">
-              <label for="radio-6">Устричный и курица</label>
+              <input id="chiken" type="radio" name="radio2" value="chiken">
+              <label for="chiken">Устричный и курица</label>
             </div>
             
             <div class="form_radio" style="width: 380px;">
-              <input id="radio-7" type="radio" name="radio2" value="4">
-              <label for="radio-7">Брусничный и мраморная говядина</label>
+              <input id="marbleBeef" type="radio" name="radio2" value="marbleBeef">
+              <label for="marbleBeef">Брусничный и мраморная говядина</label>
             </div>
 
             <div class="form_radio" style="width: 380px;">
-              <input id="radio-8" type="radio" name="radio2" value="5">
-              <label for="radio-8">Фруктовый и кролик</label>
+              <input id="rabbit" type="radio" name="radio2" value="rabbit">
+              <label for="rabbit">Фруктовый и кролик</label>
             </div>
 
           <h2>Доп. опции</h2>
           <div class="input-group mb-3">
             <div style="width: 380px;">
-              <input type="checkbox" id=”one”> Посыпать сухариками
+              <input type="checkbox" name="add" id=”rusks” value="rusks"> Посыпать сухариками
             </div>
             <div style="width: 380px;">
-              <input type="checkbox" id=”one”> Полить доп. соусом
+              <input type="checkbox" name="add" id=”sauce” value="sauce"> Полить доп. соусом
             </div>
             <div style="width: 380px;">
-              <input type="checkbox" id=”one”> Добавить кунжута
+              <input type="checkbox" name="add" id=”sesame” value="sesame"> Добавить кунжута
             </div>
             
             	
           </div>
 
-          <button type="button" id="calculate">Calculate!</button>
-
+          <button type="submit" id="calculate" value="Calculate">Calculate!</button>
         </form>
+        
       </div>
       <!-- CALCULATOR end -->
       <!-- TIPS start -->
-      <div id="totalTip">
+      <div id="expense">
         <span id="pay1">0</span>
         <small>р.</small><br>
         <span id="pay2">0</span>
@@ -92,7 +92,7 @@
       </div>
       <!-- TIPS end -->
     </div>
-
+ 
 
 
     <script src="calculator.js"></script>
