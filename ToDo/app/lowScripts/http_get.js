@@ -13,11 +13,12 @@ export function getRequest(){
     if (request.status != 200) {
     alert( request.status + ': ' + request.statusText );
     } else {
-        request=request.responseText;
-        console.log(request);
-
-        tempFeelsLike=request.slice(167 , 170) -270;
-        console.log( tempFeelsLike); // responseText -- текст ответа.
+        console.log(request.responseText);
+        var requestInd=request.responseText.indexOf("feels_like");
+        console.log(requestInd);
+        tempFeelsLike=request.responseText.slice(requestInd + 12 , requestInd + 15) -270;
+        console.log(tempFeelsLike); // responseText -- текст ответа.
+        input.placeholder="Планируй дела правильно, на улице " + tempFeelsLike + " градусов";
     }
-    return tempFeelsLike;
+    
 }
