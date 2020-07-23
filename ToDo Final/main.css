@@ -1,13 +1,13 @@
 body{
-    min-height:100%;
+    min-height:90%;
     font-family: Bad Script;
     background: #5614B0;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #DBD65C, #5614B0);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #DBD65C, #5614B0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: rgb(219,214,92);
+    background: linear-gradient(330deg, rgba(249,185,101,1) 0%, rgba(86,20,176,1) 100%);
   }
   h1{
     text-transform: uppercase;
-    background: #86a8e7;
+    background: #35b8cc;
     color:white;
     margin: 0;
     padding:10px 28px;
@@ -45,14 +45,14 @@ body{
     cursor: pointer;
   }
   button{
-    background-color:#86a8e7; /* Green */
+    background-color:#35b8cc; /* Green */
     border: none;
     color: white;
     padding: 8px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 15px;
+    font-size: 20px;
     border-radius:4px;
     font-family:Bad Script;
     -webkit-transition-duration: 0.4s; /* Safari */
@@ -68,7 +68,7 @@ body{
   #buttons{
     display:inline-block;
     text-align:center;
-    margin-left: 22%;
+    margin-left: 19%;
     position:absolute;
     bottom:5px;
   }
@@ -79,6 +79,11 @@ body{
     height:100%;
     background:white;
     position:relative;
+    margin-bottom: 100px auto;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 20px;
   }
   #overlay{
     height: 0;
@@ -147,7 +152,7 @@ body{
     height:50px;
     line-height: 50px;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 23px;
   }
   .todos li:nth-child(2n){
     background:#edf1f5;

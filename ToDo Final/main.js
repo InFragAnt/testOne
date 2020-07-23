@@ -49,6 +49,7 @@ $(document).ready(() => {
   function loadTodos() {
     if (localStorage.getItem("todoList")) {
       ul.innerHTML = localStorage.getItem("todoList");
+      deleteTodo();
     }
   }
 
